@@ -54,7 +54,7 @@ document.getElementById('jewelryForm').addEventListener('submit', function(event
     card.innerHTML += '<p>Quantity (gm):</p><p>' + quantity + '</p>';
     card.innerHTML += '<p>Fine:</p><p>' + fine + '</p>';
     card.innerHTML += '<p>Wastage:</p><p>' + wastage + '</p>';
-    card.innerHTML += '<p>Total Amount:</p><p>' + total.toFixed(2) + '</p>';
+    card.innerHTML += '<p>Total Fine(gm):</p><p>' + total.toFixed(2) + '</p>';
     var paymentButton = document.createElement('button');
     paymentButton.textContent = 'Payment Done';
     paymentButton.addEventListener('click', function() {
@@ -161,7 +161,7 @@ function sendToWhatsApp(orderId, name, quantity, fine, wastage, total) {
     message += "Quantity (gm): " + quantity + "\n";
     message += "Fine: " + fine + "\n";
     message += "Wastage: " + wastage + "\n";
-    message += "Total Amount: " + total.toFixed(2) + "\n\n";
+    message += "Total Fine(gm): " + total.toFixed(2) + "\n\n";
 
     // Constructing WhatsApp message link
     var whatsappUrl = "https://wa.me/?text=" + encodeURIComponent(message);
