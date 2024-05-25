@@ -159,7 +159,7 @@ function sendToWhatsApp(orderId, name, quantity, fine, wastage, total) {
     message += "Name: " + name + "\n";
     message += "Order ID: " + orderId + "\n";
     message += "Quantity (gm): " + quantity + "\n";
-    message += "Fine: " + fine + "\n";
+    message += "Tunch: " + fine + "\n";
     message += "Wastage: " + wastage + "\n";
     message += "Total Fine(gm): " + total.toFixed(2) + "\n\n";
 
