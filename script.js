@@ -52,7 +52,7 @@ document.getElementById('jewelryForm').addEventListener('submit', function(event
     card.innerHTML += '<p>Name:</p><p>' + name + '</p>';
     card.innerHTML += '<p>Order ID:</p><p>' + orderId + '</p>';
     card.innerHTML += '<p>Quantity (gm):</p><p>' + quantity + '</p>';
-    card.innerHTML += '<p>Fine:</p><p>' + fine + '</p>';
+    card.innerHTML += '<p>Tunch:</p><p>' + fine + '</p>';
     card.innerHTML += '<p>Wastage:</p><p>' + wastage + '</p>';
     card.innerHTML += '<p>Total Fine(gm):</p><p>' + total.toFixed(2) + '</p>';
     var paymentButton = document.createElement('button');
@@ -88,7 +88,7 @@ function saveData() {
             name: card.querySelector('p:nth-of-type(2)').textContent,
             orderId: card.querySelector('p:nth-of-type(4)').textContent,
             quantity: card.querySelector('p:nth-of-type(6)').textContent,
-            fine: card.querySelector('p:nth-of-type(8)').textContent,
+            Tunch: card.querySelector('p:nth-of-type(8)').textContent,
             wastage: card.querySelector('p:nth-of-type(10)').textContent,
             total: card.querySelector('p:nth-of-type(12)').textContent,
             paymentDone: card.querySelector('.green') !== null
@@ -109,7 +109,7 @@ function loadSavedData() {
             card.innerHTML += '<p>Name:</p><p>' + cardData.name + '</p>';
             card.innerHTML += '<p>Order ID:</p><p>' + cardData.orderId + '</p>';
             card.innerHTML += '<p>Quantity (gm):</p><p>' + cardData.quantity + '</p>';
-            card.innerHTML += '<p>Fine:</p><p>' + cardData.fine + '</p>';
+            card.innerHTML += '<p>Tunch:</p><p>' + cardData.fine + '</p>';
             card.innerHTML += '<p>Wastage:</p><p>' + cardData.wastage + '</p>';
             card.innerHTML += '<p>Total Amount:</p><p>' + cardData.total + '</p>';
             if (!cardData.paymentDone) {
